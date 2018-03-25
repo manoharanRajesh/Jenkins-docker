@@ -5,7 +5,7 @@
 /**
  * Build parameters, must be adjusted when forked!
  **/
-dockerImageName = 'rajeshmanoharan/ubuntu'
+dockerImageName = 'manoharanrajesh/ubuntu'
 dockerWorkspace = 'ubuntu/'
 dockerTags = ["latest","18","18.04"] as String[]
 dockerTestCommands =

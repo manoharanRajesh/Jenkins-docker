@@ -29,9 +29,9 @@ function dockerUserInit {
   local default_user_id=$2
   local default_group=$3
   local default_group_id=$4
-  DOCKER_DEFAULT_USER=${default_user:-rajeshmanoharan}
+  DOCKER_DEFAULT_USER=${default_user:-manoharanrajesh}
   DOCKER_DEFAULT_USER_ID=${default_user_id:-1000}
-  DOCKER_DEFAULT_GROUP=${default_group:-rajeshmanoharan}
+  DOCKER_DEFAULT_GROUP=${default_group:-manoharanrajesh}
   DOCKER_DEFAULT_GROUP_ID=${default_group_id:-1000}
 
   CURRENT_DOCKER_USER=${DOCKER_USER:-$DOCKER_DEFAULT_USER}

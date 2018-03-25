@@ -5,7 +5,7 @@
 /**
  * Build parameters, must be adjusted when forked!
  **/
-dockerImageName = 'rajeshmanoharan/centos'
+dockerImageName = 'manoharanrajesh/centos'
 dockerWorkspace = 'centos/'
 dockerTags = ["latest","7","7.4","7.4.1708"] as String[]
 dockerTestCommands =

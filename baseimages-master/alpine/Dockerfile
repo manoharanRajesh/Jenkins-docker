@@ -2,7 +2,7 @@ FROM alpine
 
 ARG BUILD_DATE=undefined
 
-ENV WORKSHOP_HOME=/var/rajeshmanoharan \
+ENV WORKSHOP_HOME=/var/manoharanrajesh \
     DOCKERIZE_VERSION=v0.6.0
 
 RUN apk upgrade --update && \
@@ -18,7 +18,7 @@ RUN apk upgrade --update && \
       curl && \
     # Network fix
     echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf && \
-    # Rajeshmanoharan Feature Script Folder
+    # Manoharanrajesh Feature Script Folder
     mkdir -p ${WORKSHOP_HOME} && \
     # Install dockerize
     wget -O /tmp/dockerize.tar.gz https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-alpine-linux-amd64-$DOCKERIZE_VERSION.tar.gz && \

@@ -1,4 +1,4 @@
-# Rajeshmanoharan Docker Base Image
+# Manoharanrajesh Docker Base Image
 
 
 Alpine images are smaller than full distributions, e.g. CentOS. This is a base image with some tweaks based on the official alpine image on Dockerhub.
@@ -14,18 +14,18 @@ Image Features:
 # Build the Image
 
 ~~~~
-$ cd alpine && docker build -t rajeshmanoharan/alpine .
+$ cd alpine && docker build -t manoharanrajesh/alpine .
 ~~~~
 
 # Run the Image
 
 ~~~~
-$ docker run -it --rm rajeshmanoharan/alpine bash
+$ docker run -it --rm manoharanrajesh/alpine bash
 ~~~~
 
-# Rajeshmanoharan Dockerwait Feature
+# Manoharanrajesh Dockerwait Feature
 
-The Rajeshmanoharan Dockerwait Feature is a script for polling server ports. This is mandatory when you want to wait for other containers starting web servers or databases.
+The Manoharanrajesh Dockerwait Feature is a script for polling server ports. This is mandatory when you want to wait for other containers starting web servers or databases.
 
 You can define a the waiting parameters with the enviromnemt variables:
 
@@ -44,7 +44,7 @@ $ docker run \
     --net testnetwork \
     -e "DOCKER_WAIT_HOST=postgres" \
     -e "DOCKER_WAIT_PORT=5432" \
-    rajeshmanoharan/alpine dockerwait
+    manoharanrajesh/alpine dockerwait
 ~~~~
 
 > Waits at most 60 seconds for the database.
@@ -74,16 +74,16 @@ exec your_application_command_here
 
 > Simple entrypoint.sh script example.
 
-# Rajeshmanoharan User Feature
+# Manoharanrajesh User Feature
 
-The Rajeshmanoharan User Feature is a script for specifiying the run user of your application with env variables.
+The Manoharanrajesh User Feature is a script for specifiying the run user of your application with env variables.
 The user will be created automatically and can be user inside your entrypoint to start your application using `su-exec`.
 
 You can define a user for your application at startup with the environment variables:
 
-* `DOCKER_USER`: The user's name, should match a valid username on your host machine (Default: rajeshmanoharan).
+* `DOCKER_USER`: The user's name, should match a valid username on your host machine (Default: manoharanrajesh).
 * `DOCKER_USER_ID`: The user's id should match a valid id on your host machine (Default: 1000).
-* `DOCKER_USERGROUP`: The user's groupname, should match a valid groupname on your host machine (Default: rajeshmanoharan).
+* `DOCKER_USERGROUP`: The user's groupname, should match a valid groupname on your host machine (Default: manoharanrajesh).
 * `DOCKER_USERGROUP_ID`: The user's groupid, should match a valid goup id on your host machine (Default: 1000).
 
 Example Use Case:
@@ -94,7 +94,7 @@ $ docker run \
     -e "DOCKER_USER_ID=2000" \
     -e "DOCKER_USERGROUP=YourGroup" \
     -e "DOCKER_USERGROUP_ID=2000" \
-    rajeshmanoharan/alpine ./var/rajeshmanoharan/createuser.sh
+    manoharanrajesh/alpine ./var/manoharanrajesh/createuser.sh
 ~~~~
 
 In order to make this work you will have to hook this script in your individual entrypoint script:
@@ -103,7 +103,7 @@ In order to make this work you will have to hook this script in your individual 
 #!/bin/bash
 
 # Include The Feature Script
-source /var/rajeshmanoharan/dockeruser.sh
+source /var/manoharanrajesh/dockeruser.sh
 # Create The User
 dockerUser
 # Print User Information
@@ -162,13 +162,13 @@ $ dockerize -wait tcp://db:5432 -wait http://web:80 -timeout 10s
 # Build the Image
 
 ~~~~
-$ docker build -t rajeshmanoharan/alpine .
+$ docker build -t manoharanrajesh/alpine .
 ~~~~
 
 # Run the Image
 
 ~~~~
-$ docker run -it --rm rajeshmanoharan/alpine bash
+$ docker run -it --rm manoharanrajesh/alpine bash
 ~~~~
 
 

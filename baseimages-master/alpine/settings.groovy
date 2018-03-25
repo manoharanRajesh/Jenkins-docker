@@ -5,7 +5,7 @@
 /**
  * Build parameters, must be adjusted when forked!
  **/
-dockerImageName = 'rajeshmanoharan/alpine'
+dockerImageName = 'manoharanrajesh/alpine'
 dockerWorkspace = 'alpine/'
 dockerTags = ["latest"] as String[]
 dockerTestCommands =
