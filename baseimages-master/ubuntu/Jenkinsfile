@@ -1,0 +1,15 @@
+/** Jenkins 2.0 Buildfile
+ *
+ * Master Jenkins 2.0 can be started by typing:
+ * docker run -d -p 8090:8080 --name jenkins rajeshmanoharan/jenkins
+ *
+ * Slave 'docker' can be started by typing:
+ * docker run -d -v /var/run/docker.sock:/var/run/docker.sock --link jenkins:jenkins -e "SWARM_CLIENT_LABELS=docker" rajeshmanoharan/swarm-dockerhost
+ **/
+
+node('docker') {
+    checkout scm
+    job = load 'build/buildImage.groovy'
+    settings = load 'ubuntu/settings.groovy'
+    job.buildJobCI(settings.dockerWorkspace,settings.dockerImageName,settings.dockerTags,settings.dockerTestCommands,settings.dockerImages,job.getBranchName())
+}
