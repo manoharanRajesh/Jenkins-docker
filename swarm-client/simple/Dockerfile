@@ -2,7 +2,7 @@ FROM openjdk:8u102-jdk
 
 MAINTAINER manoharan rajesh
 
-ENV JENKINS_SWARM_VERSION 3.4
+ENV JENKINS_SWARM_VERSION 3.12
 ENV HOME /home/jenkins-slave
 
 # install netstat to allow connection health check with
@@ -14,6 +14,8 @@ RUN curl --create-dirs -sSLo /usr/share/jenkins/swarm-client-$JENKINS_SWARM_VERS
   && chmod 755 /usr/share/jenkins
 
 COPY jenkins-slave.sh /usr/local/bin/jenkins-slave.sh
+
+RUN chmod -R 777 /usr/local/bin/jenkins-slave.sh
 
 USER jenkins-slave
 VOLUME /home/jenkins-slave
