@@ -1,14 +1,14 @@
 # docker-jenkins-swarm #
 
 Docker image for Jenkins, with swarm plugin installed.
-Based on the [official image](https://registry.hub.docker.com/_/jenkins/).
+Based on the [official image](https://hub.docker.com/r/jenkins/jenkins/).
 
-Can be used with Docker slaves from [`manoharanrajesh/jenkins-swarm-slave`](https://registry.hub.docker.com/r/manoharanrajesh/jenkins-swarm-slave/)
+Can be used with Docker slaves from [`manoharanrajesh/jenkins-slave`](https://hub.docker.com/r/manoharanrajesh/jenkins-swarm-slave/)
 
 # Running
 
-    docker run --name jenkins -p 8080:8080 -p 50000:50000 -v /var/jenkins_home csanchez/jenkins-swarm
+    docker run --name jenkins -p 8080:8080 -p 50000:50000 -v /var/jenkins_home manoharanrajesh/jenkinsmaster:simple
 
 # Building
 
-    docker build -t csanchez/jenkins-swarm .
+    docker build -t manoharanrajesh/jenkinsmaster:simple .

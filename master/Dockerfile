@@ -1,4 +1,6 @@
-FROM jenkins
+FROM jenkins/jenkins:lts
+
+MAINTAINER manoharan rajesh
 
 COPY plugins.txt /usr/share/jenkins/plugins.txt
 RUN /usr/local/bin/plugins.sh /usr/share/jenkins/plugins.txt
