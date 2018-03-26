@@ -2,7 +2,7 @@
 
 | Base Image   | Tag          |Version| Dockerfile | Readme |
 |--------------|--------------|-------|------------|--------|
-| manoharanrajesh/baseimages |alpine |3.6       | [Dockerfile](alpine/Dockerfile) | [README.md](alpine/README.md) |
+| manoharanrajesh/baseimages |alpine |3.7      | [Dockerfile](alpine/Dockerfile) | [README.md](alpine/README.md) |
 | manoharanrajesh/baseimages |centos |7.4.1708  | [Dockerfile](centos/Dockerfile) | [README.md](README.md) |
 | manoharanrajesh/baseimages |ubuntu |  18.04   | [Dockerfile](ubuntu/Dockerfile) | [README.md](README.md) |
 

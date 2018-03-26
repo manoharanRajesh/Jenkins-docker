@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3.7
 
 ARG BUILD_DATE=undefined
 

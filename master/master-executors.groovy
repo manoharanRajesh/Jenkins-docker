@@ -27,7 +27,7 @@ instance.setSecurityRealm(hudsonRealm)
 instance.save()
 
 
-def strategy = new GlobalMatrixAuthorizationStrategy()
+//def strategy = new GlobalMatrixAuthorizationStrategy()
 
 //  Slave Permissions
 //strategy.add(hudson.model.Computer.BUILD,'jenkinsuser')
@@ -72,25 +72,25 @@ def strategy = new GlobalMatrixAuthorizationStrategy()
 //strategy.add(hudson.model.View.READ,'jenkinsuser')
 
 //  Setting Anonymous Permissions
-strategy.add(hudson.model.Hudson.READ,'anonymous')
-strategy.add(hudson.model.Item.BUILD,'anonymous')
-strategy.add(hudson.model.Item.CANCEL,'anonymous')
-strategy.add(hudson.model.Item.DISCOVER,'anonymous')
-strategy.add(hudson.model.Item.READ,'anonymous')
+//strategy.add(hudson.model.Hudson.READ,'anonymous')
+//strategy.add(hudson.model.Item.BUILD,'anonymous')
+//strategy.add(hudson.model.Item.CANCEL,'anonymous')
+//strategy.add(hudson.model.Item.DISCOVER,'anonymous')
+//strategy.add(hudson.model.Item.READ,'anonymous')
 
 // Setting Admin Permissions
-strategy.add(Jenkins.ADMINISTER, "admin")
+//strategy.add(Jenkins.ADMINISTER, "admin")
 
 // Setting easy settings for local builds
-def local = System.getenv("BUILD").toString()
-if(local == "local") {
+//def local = System.getenv("BUILD").toString()
+//if(local == "local") {
     //  Overall Permissions
-    strategy.add(hudson.model.Hudson.ADMINISTER,'anonymous')
-    strategy.add(hudson.PluginManager.CONFIGURE_UPDATECENTER,'anonymous')
-    strategy.add(hudson.model.Hudson.READ,'anonymous')
-    strategy.add(hudson.model.Hudson.RUN_SCRIPTS,'anonymous')
-    strategy.add(hudson.PluginManager.UPLOAD_PLUGINS,'anonymous')
-}
+  //  strategy.add(hudson.model.Hudson.ADMINISTER,'anonymous')
+   // strategy.add(hudson.PluginManager.CONFIGURE_UPDATECENTER,'anonymous')
+    //strategy.add(hudson.model.Hudson.READ,'anonymous')
+   // strategy.add(hudson.model.Hudson.RUN_SCRIPTS,'anonymous')
+    //strategy.add(hudson.PluginManager.UPLOAD_PLUGINS,'anonymous')
+//}
 
-instance.setAuthorizationStrategy(strategy)
-instance.save()
+//instance.setAuthorizationStrategy(strategy)
+// instance.save()
